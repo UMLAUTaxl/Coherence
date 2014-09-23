@@ -1,7 +1,6 @@
-import rhythmdb
+from gi.repository import RB
 
-
-class CoherenceDBEntryType(rhythmdb.EntryType):
-    def __init__(self, client_id):
-        entry_name = "CoherenceUpnp:%s", client_id
-        rhythmdb.EntryType.__init__(self, name=entry_name)
+class CoherenceDBEntryType(RB.RhythmDBEntryType):
+	def __init__(self, client_id):
+		entry_name = "CoherenceUpnp:%s", client_id
+		RB.RhythmDBEntryType.__init__(self, name=entry_name)
